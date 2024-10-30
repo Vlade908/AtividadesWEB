@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Sorteador de Números</h1>
+        <label for="startNumber">Número Inicial:</label>
+        <input type="number" id="startNumber" min="0" placeholder="Digite o número inicial">
+        
+        <label for="endNumber">Número Final:</label>
+        <input type="number" id="endNumber" min="0" placeholder="Digite o número final">
+        
+        <label for="quantity">Quantidade de Números a Sortear:</label>
+        <input type="number" id="quantity" min="1" placeholder="Digite a quantidade">
+
+        <button onclick="sortearNumeros()">Sortear</button>
+
+        <div class="result" id="result"></div>
+    </div>
+
+    <script src="../JS/script.js"></script>
+
+</body>
+</html>
