@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CATALOG>
+  <PACIENTE>
+    <NOME>ANA </NOME>
+    <PESO>41 </PESO>
+    <ALTURA>1.54 </ALTURA>
+    <GC>2 </GC>
+    <IMC>17.29</IMC>
+  </PACIENTE>
+
+  <PACIENTE>
+    <NOME>PEDRO </NOME>
+    <PESO>65 </PESO>
+    <ALTURA>1.62 </ALTURA>
+    <GC>2 </GC>
+    <IMC>24.77</IMC>
+  </PACIENTE>
+
+  <PACIENTE>
+    <NOME>GUSTAVO </NOME>
+    <PESO>70 </PESO>
+    <ALTURA>1.85 </ALTURA>
+    <GC>2 </GC>
+    <IMC>20.45</IMC>
+  </PACIENTE>
+  
+</CATALOG>
