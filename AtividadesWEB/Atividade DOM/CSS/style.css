@@ -1,0 +1,358 @@
+:root {
+    --color-light:#0077FF;
+    --color-dark: #212121;
+    --color-signal: #fab700;
+    --bg-color: #424242;
+    --hl-color: #2196F3;
+    --muted-color: mix(white, var(--bg-color), 70%);
+    --trans-time: 300ms;
+    --width: 320px;
+
+
+
+    
+    --color-background: var(--color-light);
+    --color-text: var(--color-dark);
+    --color-accent: var(--color-signal);
+    
+    --size-bezel: .5rem;
+    --size-radius: 4px;
+    
+    
+    line-height: 1.4;
+    
+    font-family: 'Inter', sans-serif;
+    font-size: calc(.6rem + .4vw);
+    color: var(--color-text);
+    background: var(--color-background);
+    font-weight: 300;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+#body{
+    margin: auto;
+}
+
+#Container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    background-color: #c2c2c2;
+}
+#cartao-titulo{
+    padding-left: 5%;
+    background-color: #2b2a2a;
+    color: #f1f1f1;
+    border-radius: 15px 15px 0px 0px ;
+}
+
+#cadastro-cartao{
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    background-color: rgb(221, 221, 221);
+    width: 106vh;
+    height: 39vh;
+    border-radius: 15px 15px 0px 0px;
+    -webkit-box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.884);
+    -moz-box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.884);
+    box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.884);
+}
+#cartao-corpo{
+    display: flex;
+    margin-left: 10px;
+}
+
+#cartao-input_geral{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#cartao_input_1, #cartao_input_2, #cartao_input_3, #cartao_nome{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+#cartao-input_geral> button{
+    display: flex;
+}
+
+
+.custom-field {
+    position: relative;
+    font-size: 14px;
+    border-top: 20px solid transparent;
+    margin-bottom: 5px;
+    display: inline-block;
+    --field-padding: 12px;
+  }
+  
+  .custom-field input {
+    border: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #f2f2f2;
+    padding: var(--field-padding);
+    border-radius: 3px;
+    width: 250px;
+    outline: none;
+    font-size: 14px;
+  }
+
+  .custom-field #inp_nome {
+    border: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #f2f2f2;
+    padding: var(--field-padding);
+    border-radius: 3px;
+    width: 771px;
+    outline: none;
+    font-size: 14px;
+  }
+  
+  .custom-field .placeholder {
+    position: absolute;
+    left: var(--field-padding);
+    width: calc(100% - (var(--field-padding) * 2));
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    top: 22px;
+    line-height: 100%;
+    transform: translateY(-50%);
+    color: #aaa;
+    transition: 
+      top 0.3s ease,
+      color 0.3s ease,
+      font-size 0.3s ease;
+  }
+  
+  .custom-field input.dirty + .placeholder,
+  .custom-field input:focus + .placeholder,
+  .custom-field input:not(:placeholder-shown) + .placeholder {
+    top: -10px;
+    font-size: 10px;
+    color: #222;
+  }
+  
+  
+
+  .custom-field.three {
+    --draw-duration: 0.1s;
+    --draw-color: #222;
+    --draw-line-width: 2px;
+    --draw-easing: linear;
+  }
+  
+  .custom-field.three .border {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: none;
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+    border-radius: 3px;
+  }
+  
+  .custom-field.three .border::after, 
+  .custom-field.three .border::before {
+    content: "";
+    width: 0;
+    height: 0;
+    display: inline-block;
+    position: absolute;
+    border-radius: 3px;
+  }
+  
+  .custom-field.three .border::before {
+    left: 0;
+    bottom: 0;
+    border-right: 0px solid var(--draw-color);
+    border-bottom: 0px solid var(--draw-color);
+    transition: 
+      border 0s linear calc(var(--draw-duration) * 4),
+      height var(--draw-duration) var(--draw-easing) calc(var(--draw-duration) * 2),
+      width var(--draw-duration) var(--draw-easing) calc(var(--draw-duration) * 3);
+  }
+  
+  .custom-field.three .border::after {
+    right: 0;
+    top: 0;
+    border-left: 0px solid var(--draw-color);
+    border-top: 0px solid var(--draw-color);
+    transition: 
+      border 0s linear calc(var(--draw-duration) * 2),
+      height var(--draw-duration) var(--draw-easing),
+      width var(--draw-duration) var(--draw-easing) var(--draw-duration);
+  }
+  
+  .custom-field.three input:focus ~ .border::before,
+  .custom-field.three input:not(:placeholder-shown) ~ .border::before,
+  .custom-field.three input.dirty ~ .border::before,
+  .custom-field.three input:focus ~ .border::after,
+  .custom-field.three input:not(:placeholder-shown) ~ .border::after,
+  .custom-field.three input.dirty ~ .border::after {
+    width: 100%;
+    height: 100%;
+    border-width: var(--draw-line-width);
+  }
+  
+  .custom-field.three input:not(:placeholder-shown) ~ .border::before,
+  .custom-field.three input.dirty ~ .border::before,
+  .custom-field.three input:focus ~ .border::before {
+    transition-delay: 0s, var(--draw-duration), 0s;
+  }
+  
+  .custom-field.three input:not(:placeholder-shown) ~ .border::after,
+  .custom-field.three input.dirty ~ .border::after,
+  .custom-field.three input:focus ~ .border::after {
+    transition-delay: 
+      calc(var(--draw-duration) * 2), 
+      calc(var(--draw-duration) * 3), 
+      calc(var(--draw-duration) * 2);
+  }
+
+
+  /*/ BUTTONS // ============================== /*/
+.btn {
+  background: #fff;
+  color: mix(black, var(--muted-color), 25%);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+  &:hover {
+    color: mix(black, var(--muted-color), 30%);
+    box-shadow: 0 7px 14px rgba(0, 0, 0, 0.18), 0 5px 5px rgba(0, 0, 0, 0.12);
+  }
+  &.btn-link {
+    background: --hl-color;
+    color: mix(white, var(--hl-color), 80%);
+    &:hover {
+      background: darken(var(--hl-color), 5%);
+      color: mix(white, var(--hl-color), 85%);
+    }
+  }
+  &.btn-submit {
+    background: var(--hl-color);
+    color: mix(white, var(--hl-color), 70%);
+    &:hover {
+      background: darken(var(--hl-color), 5%);
+      color: mix(white, var(--hl-color), 85%);
+    }
+  }
+  &.btn-cancel {
+    background: #eee;
+    &:hover {
+      background: darken(#eee, 5%);
+      color: mix(black, var(--muted-color), 30%);
+    }
+  }
+}
+
+.btn-box {
+  text-align: start;
+  margin: 10px 0;
+}
+  
+/*-----------TABELA------------*/
+
+#Pacientes{
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    background-color: rgb(221, 221, 221);
+    width: 106vh;
+    min-height: 36vh;
+    height: auto;
+    border-radius: 0px 0px 15px 15px;
+    overflow: hidden;
+    padding: 10px;
+    -webkit-box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.884);
+    -moz-box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.884);
+    box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.884);
+}
+
+/* Tabela Pacientes */
+#Pacientes table {
+    width: 100%;
+    margin-top: 5px;
+    border-collapse: collapse;
+    font-family: 'Inter', sans-serif;
+    color: var(--color-text);
+    background-color: #cddce6;
+    border-radius: var(--size-radius);
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(231, 225, 225, 0.1);
+}
+
+#Pacientes th, #Pacientes td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    transition: background-color var(--trans-time);
+}
+
+#Pacientes th {
+    background-color: var(--color-dark);
+    color: #f1f1f1;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#Pacientes tbody tr:hover {
+    background-color: var(--color-signal);
+    color: #fff;
+}
+
+#Pacientes tbody tr:last-child td {
+    border-bottom: none;
+}
+
+#Pacientes td {
+    font-size: calc(.6rem + .2vw);
+    color: var(--color-dark);
+}
+
+/* Botão na tabela */
+#Pacientes .btn {
+    background: var(--hl-color);
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: var(--size-radius);
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background var(--trans-time), box-shadow var(--trans-time);
+}
+
+#Pacientes .btn:hover {
+    background: darken(var(--hl-color), 5%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    
+</head>
+<body>
+    
+<div id="Container">
+    <div id="header">
+        <a href="">HOME</a>
+        <a href="">B</a>
+        <a href="">C</a>
+    </div>
+    <div id="body">
+        <div id="cadastro-cartao">
+            <div id="cartao-titulo">
+                <h1>Clinica de nutrição</h1>
+            </div> 
+            <div id="cartao-corpo">
+                <form action="" id="form">
+                    <h1>Adicionar novo paciente</h1>
+                    <hr>
+                    <div id="cartao_nome">
+                        <label class="custom-field three" >
+                            <input id="inp_nome" type="text" placeholder="&nbsp;" >
+                            <span class="placeholder">Nome</span>
+                            <span class="border"></span>
+                        </label>
+                        
+                    </div>
+                    
+                    <div id="cartao-input_geral">
+
+                        <div class="cartao_input_1">
+                            <label class="custom-field three" >
+                                <input id="inp_peso" type="text" placeholder="&nbsp;" >
+                                <span class="placeholder">Peso:</span>
+                                <span class="border"></span>
+                            </label>
+                        </div>
+
+                        <div id="cartao_input_2">
+                            <label class="custom-field three" >
+                                <input id="inp_altura"  type="text" placeholder="&nbsp;" >
+                                <span class="placeholder">Altura:</span>
+                                <span class="border"></span>
+                            </label>
+
+                        </div>
+
+                        <div class="cartao_input_3">
+                            <label class="custom-field three" >
+                                <input id="inp_porc_gordura" type="text" placeholder="&nbsp;" >
+                                <span class="placeholder">% de Gordura</span>
+                                <span class="border"></span>
+                            </label>
+                        </div>
+                        
+                    </div>
+                    <div class="btn-box">
+                        <button class="btn btn-submit" type="submit" onclick="adicionarPessoa(event)" >
+                            Adicionar
+                        </button>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+
+        <div id="Pacientes">
+            <h1>Meus Pacientes</h1>
+            <hr>
+            <table id="tabelaPessoas" border="1">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>PESO(Kg)</th>
+                        <th>Altura(m)</th>
+                        <th>Gordura Corporal(%)</th>
+                        <th>IMC</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Novos itens aparecerão aqui -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="footer">
+
+    </div>
+</div>
+
+ <script src="../JS/script.js"></script>
+
+</body>
+</html>
